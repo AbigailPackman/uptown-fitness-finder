@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183c32">
+  <meta name="description" content="Compare gyms and fitness studios around Uptown New Orleans. Find your fit with Uptown Fit.">
+  <title>Uptown Fit — Find Your Fit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Uptown Fit home"><span class="brand-mark">U</span><span>uptown<span class="brand-light">fit</span></span></a>
+    <nav aria-label="Main navigation"><a href="#studios">Explore studios</a><a href="#map">Map</a></nav>
+    <a class="nav-compare" href="#studios">Find your fit <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEIGHBORHOOD, YOUR NEXT WORKOUT</p>
+        <h1>Uptown Fit<span class="hero-period">.</span></h1>
+        <p class="hero-tagline">Find Your Fit.</p>
+        <p class="hero-description">A better way to find your next favorite workout. Explore gyms and studios around Uptown New Orleans, all in one place.</p>
+        <a class="button button-light" href="#studios">Explore the studios <span aria-hidden="true">↓</span></a>
+        <div class="hero-note"><span class="note-icon">✳</span> Made for the Uptown community</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a person exercising">
+        <div class="sun-disc"></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-image"></div>
+        <div class="floating-tag tag-top"><span>YOUR ROUTINE</span><strong>Starts here ↗</strong></div>
+        <div class="floating-tag tag-bottom"><span>MOVE YOUR WAY</span><strong>Find a studio near you</strong></div>
+        <span class="art-spark spark-one">✳</span><span class="art-spark spark-two">✳</span>
+      </div>
+      <div class="hero-bottom"><span>NEW ORLEANS, LOUISIANA</span><span>EXPLORE · COMPARE · MOVE</span></div>
+    </section>
+
+    <section class="intro section-wrap" id="studios">
+      <div><p class="eyebrow eyebrow-dark">THE UPTOWN EDIT</p><h2>Find a place to<br><span>feel good.</span></h2></div>
+      <p class="intro-copy">From a neighborhood gym to a candlelit flow, find the kind of movement that fits your day. Compare local spots, then choose your next class.</p>
+    </section>
+
+    <section class="directory section-wrap" aria-label="Fitness studio directory">
+      <div class="directory-heading"><div><h2>Explore Uptown</h2><p>Real local businesses. Details are labeled when unavailable.</p></div><span class="result-count" id="result-count" aria-live="polite"></span></div>
+      <div class="filters" aria-label="Filter studios">
+        <label class="filter-search"><span class="sr-only">Search studios</span><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Search studios…"></label>
+        <label><span class="sr-only">Workout type</span><select id="type-filter"><option value="">All workout types</option></select></label>
+        <label><span class="sr-only">Price</span><select id="price-filter"><option value="">Any price</option><option value="under50">Under $50 / month</option><option value="50to100">$50–$100 / month</option><option value="over100">Over $100 / month</option></select></label>
+        <label><span class="sr-only">Minimum rating</span><select id="rating-filter"><option value="">Any rating</option><option value="4">4.0+ rating</option><option value="4.5">4.5+ rating</option></select></label>
+        <label><span class="sr-only">Amenities and classes</span><select id="amenity-filter"><option value="">Any amenity or class</option></select></label>
+        <button class="clear-filters" id="clear-filters" type="button">Reset</button>
+      </div>
+      <div class="data-note"><span aria-hidden="true">ⓘ</span> Prices, ratings, amenities and classes are shown only when supported by the linked business information. “Not published” means we couldn’t verify it from the business website.</div>
+      <div class="business-grid" id="business-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><span>☼</span><h3>No spots match those filters.</h3><p>Try adjusting your search or clearing the filters.</p><button class="button button-green" id="empty-reset" type="button">Clear filters</button></div>
+    </section>
+
+    <section class="map-section" id="map">
+      <div class="map-inner section-wrap"><div class="map-copy"><p class="eyebrow eyebrow-dark">GET OUT THERE</p><h2>Uptown, on<br><span>the map.</span></h2><p>See the neighborhoods where these studios call home. Select a studio card for directions or explore the map.</p><a class="text-link" id="open-map" href="https://www.google.com/maps/search/fitness+studios+Uptown+New+Orleans" target="_blank" rel="noopener noreferrer">Open Google Maps <span aria-hidden="true">↗</span></a></div>
+        <div class="map-frame"><iframe id="map-embed" title="Map of Uptown New Orleans fitness studios" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=fitness%20studios%20Uptown%20New%20Orleans&output=embed"></iframe><div class="map-caption"><span class="map-pin">⌖</span><div><strong>Uptown New Orleans</strong><small>Explore local fitness destinations</small></div><span class="map-caption-arrow" aria-hidden="true">↗</span></div></div>
+      </div>
+    </section>
+
+    <section class="closing-cta"><span class="cta-flower" aria-hidden="true">✳</span><p class="eyebrow">A LITTLE CLOSER TO YOUR NEXT YES</p><h2>Your next move<br>starts <em>Uptown.</em></h2><a class="button button-light" href="#studios">Find your fit <span aria-hidden="true">↑</span></a></section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">U</span><span>uptown<span class="brand-light">fit</span></span></a><p>Made for movement in Uptown New Orleans.</p><span>Business details can change. Please verify directly with each studio.</span></footer>
+
+  <div class="compare-bar" id="compare-bar" hidden><div class="compare-bar-copy"><strong><span id="compare-count">0</span> selected</strong><span>Compare your shortlist</span></div><div class="compare-chips" id="compare-chips"></div><button class="button button-green compare-open" id="compare-open" type="button">Compare now <span aria-hidden="true">↗</span></button><button class="compare-clear" id="compare-clear" type="button" aria-label="Clear comparison">Clear</button></div>
+  <dialog class="compare-dialog" id="compare-dialog" aria-labelledby="compare-title"><div class="dialog-header"><div><p class="eyebrow eyebrow-dark">SIDE BY SIDE</p><h2 id="compare-title">Compare your spots</h2></div><button class="dialog-close" id="dialog-close" type="button" aria-label="Close comparison">×</button></div><div class="comparison-table-wrap" id="comparison-table"></div><p class="dialog-footnote">Not published = not verified from the business website. Confirm current details directly with each business.</p></dialog>
+</body>
+</html>
